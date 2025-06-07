@@ -34,3 +34,50 @@ O arquivo `application.properties` utiliza placeholders para as variáveis de am
 ```ini
 aws.s3.bucketName=${AWS_BUCKET_NAME}
 aws.s3.region=${AWS_REGION}
+
+Configure suas variáveis de ambiente:
+
+Crie um arquivo .env com base no modelo:
+
+bash
+Copiar
+Editar
+cp .env.example .env
+Edite o arquivo .env com suas credenciais reais:
+
+env
+Copiar
+Editar
+AWS_ACCESS_KEY_ID=AKIAxxxxxxxxxxxxxxxx
+AWS_SECRET_ACCESS_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+AWS_REGION=us-east-1
+S3_BUCKET_NAME=seu-nome-do-bucket
+⚠️ O arquivo .env está protegido via .gitignore. Nunca suba esse arquivo para o Git.
+
+📁 Estrutura do Projeto
+css
+Copiar
+Editar
+qrcode.generador/
+├── src/
+│   └── main/
+│       └── java/
+│           └── ... (código-fonte)
+├── .env.example
+├── .gitignore
+├── pom.xml
+├── README.md
+└── ...
+🛡️ Segurança
+Este projeto não armazena as credenciais no código-fonte
+
+.env foi removido do histórico do Git com segurança
+
+Siga sempre boas práticas de segurança com suas chaves AWS
+
+📄 Licença
+Este projeto está licenciado sob a licença MIT.
+
+👤 Autor
+Marcos Felipe Pereira da Silva
+GitHub
